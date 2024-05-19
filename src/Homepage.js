@@ -5,8 +5,8 @@ import SearchForm from "./SearchForm";
 function Homepage() {
   return (
     <>
+      <SearchForm />
       <div className="container text-center">
-        <SearchForm />
         <div className="row justify-content-center">
           {/* render all of them */}
           <BabysitterCards />
