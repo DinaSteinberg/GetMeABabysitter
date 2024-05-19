@@ -7,9 +7,10 @@ function Header() {
                src='https://i.imgur.com/ZxEabZ0.png' 
                alt='J-Sit'/>
                <div className='header__search'>
-                <input 
+                {/* <input 
                 className='header__searchInput'
-                type='text'/>
+                placeholder='What time would you like to schedule a babysitter for?'
+                type='text'/> */}
                </div>
       
     </div>
