@@ -6,11 +6,7 @@ function Header() {
               <img className='header__logo'
                src='https://i.imgur.com/ZxEabZ0.png' 
                alt='J-Sit'/>
-               <div className='header__search'>
-                <input 
-                className='header__searchInput'
-                type='text'/>
-               </div>
+             
       
     </div>
   )
