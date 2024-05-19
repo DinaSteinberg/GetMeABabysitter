@@ -1,11 +1,15 @@
 import './App.css';
 import Header from './Header.js';
-//import Home from './Home.js';
+import Homepage from './Homepage.js';
+import SearchForm from './SearchForm.jsx';
 
 function App() {
   return (
     <div className="App">
-    <Header/>
+    
+      <SearchForm />
+      
+      <Homepage/>
     </div>
   );
 }

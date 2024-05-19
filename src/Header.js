@@ -1,20 +1,12 @@
-import React from 'react'
-import './Header.css'
+import React from "react";
+
 function Header() {
   return (
-    <div className='header'>
-              <img className='header__logo'
-               src='https://i.imgur.com/ZxEabZ0.png' 
-               alt='J-Sit'/>
-               <div className='header__search'>
-                {/* <input 
-                className='header__searchInput'
-                placeholder='What time would you like to schedule a babysitter for?'
-                type='text'/> */}
-               </div>
-      
+    <div className="header">
+      <h1>JSit</h1>
+      <p>The Jewish Babysitter Shadchan</p>
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;
