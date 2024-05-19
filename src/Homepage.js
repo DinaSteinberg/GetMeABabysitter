@@ -4,7 +4,12 @@ import BabysitterCards from './BabysitterCards'
 function Homepage() {
   return (
     <>
-    <BabysitterCards/>
+    <div className="container text-center">
+        <div className="row justify-content-center">
+          {/* render all of them */}
+          <BabysitterCards />
+        </div>
+    </div>
     </>
   )
 }
