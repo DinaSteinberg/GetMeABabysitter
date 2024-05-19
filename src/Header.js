@@ -6,7 +6,7 @@ function Header() {
       <img
         className="header__logo"
         src="https://i.imgur.com/ZxEabZ0.png"
-        alt="J-Sit"
+        alt="JSit"
       />
     </div>
   );
