@@ -1,6 +1,5 @@
 import { useState } from "react";
-
-
+// import { BASE_URL } from "../App.js";
 import "./login.css";
 import fetchBabysitters from "./fetchBabysitters";
 
@@ -18,13 +17,13 @@ function MomSignUp() {
     endTime: "",
   });
 
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   async function handleSubmit(e) {
     e.preventDefault();
     if (mother.startTime >= mother.endTime) {
-      setError('Start time must be before end time.');
-      window.alert('Start time must be before end time. Please try again.')
+      setError("Start time must be before end time.");
+      window.alert("Start time must be before end time. Please try again.");
     } else {
       setError('');
       localStorage.setItem('mother', JSON.stringify(mother));
@@ -36,7 +35,7 @@ function MomSignUp() {
   return (
     <div className="login-top-container">
       <div className="login-container">
-        <h1>Find A Babysitter</h1>
+        <h1>Find a Babysitter</h1>
 
         <form onSubmit={handleSubmit}>
           <label htmlFor="firstName">First Name</label>
@@ -45,7 +44,9 @@ function MomSignUp() {
               type="name"
               required
               value={mother.firstName}
-              onChange={(e) => setMother({ ...mother, firstName: e.target.value })}
+              onChange={(e) =>
+                setMother({ ...mother, firstName: e.target.value })
+              }
               id="firstName"
               name="firstName"
             />
@@ -57,7 +58,9 @@ function MomSignUp() {
               type="name"
               required
               value={mother.lastName}
-              onChange={(e) => setMother({ ...mother, lastName: e.target.value })}
+              onChange={(e) =>
+                setMother({ ...mother, lastName: e.target.value })
+              }
               id="lastName"
               name="lastName"
             />
@@ -69,7 +72,9 @@ function MomSignUp() {
               type="number"
               required
               value={mother.numberOfChildren}
-              onChange={(e) => setMother({ ...mother, numberOfChildren: e.target.value })}
+              onChange={(e) =>
+                setMother({ ...mother, numberOfChildren: e.target.value })
+              }
               id="numberOfChildren"
               name="numberOfChildren"
             />
@@ -81,7 +86,9 @@ function MomSignUp() {
               type="address"
               required
               value={mother.address}
-              onChange={(e) => setMother({ ...mother, address: e.target.value })}
+              onChange={(e) =>
+                setMother({ ...mother, address: e.target.value })
+              }
               id="address"
               name="address"
             />
@@ -139,7 +146,9 @@ function MomSignUp() {
               type="time"
               required
               value={mother.startTime}
-              onChange={(e) => setMother({ ...mother, startTime: e.target.value })}
+              onChange={(e) =>
+                setMother({ ...mother, startTime: e.target.value })
+              }
               id="startTime"
               name="startTime"
             />
@@ -151,7 +160,9 @@ function MomSignUp() {
               type="time"
               required
               value={mother.endTime}
-              onChange={(e) => setMother({ ...mother, endTime: e.target.value })}
+              onChange={(e) =>
+                setMother({ ...mother, endTime: e.target.value })
+              }
               id="endTime"
               name="endTime"
             />
