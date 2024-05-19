@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
-import { MDBInput, MDBRow, MDBCol } from 'mdb-react-ui-kit';
-import TimePicker from 'react-time-picker';
+import { MDBInput, MDBRow, MDBCol } from "mdb-react-ui-kit";
+import TimePicker from "react-time-picker";
 
 // import { useNavigate } from "react-router";
 // import { CurrentUser } from "../contexts/CurrentUser.js";
@@ -23,53 +23,26 @@ function MomSignUp() {
     email: "",
     startTime: "",
     endTime: "",
-
   });
 
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   async function handleSubmit(e) {
     e.preventDefault();
     if (mother.startTime >= mother.endTime) {
-      setError('Start time must be before end time.');
-      window.alert('Start time must be before end time. Please try again.')
+      setError("Start time must be before end time.");
+      window.alert("Start time must be before end time. Please try again.");
     } else {
-      setError('');
-      localStorage.setItem('mother', JSON.stringify(mother));
+      setError("");
+      localStorage.setItem("mother", JSON.stringify(mother));
       // Further processing or form submission logic goes here
     }
-
   }
-
-  //   try {
-  //     const response = await fetch(`${BASE_URL}/api/authentication/`, {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(credentials),
-  //     });
-
-  //     const data = await response.json();
-  //     console.log("Login", data);
-
-  //     if (response.ok) {
-  //       setCurrentUser(data.user);
-  //       localStorage.setItem("token", data.token);
-  //       navigate(`/`);
-  //     } else {
-  //       setErrorMessage(data.message);
-  //     }
-  //   } catch (error) {
-  //     console.error("An error occurred:", error);
-  //     setErrorMessage("An error occurred, please try again");
-  //   }
-  // }
 
   return (
     <div className="login-top-container">
       <div className="login-container">
-        <h1>Find A Babysitter</h1>
+        <h1>Find a Babysitter</h1>
 
         <form onSubmit={handleSubmit}>
           <label htmlFor="firstName">First Name</label>
@@ -78,7 +51,9 @@ function MomSignUp() {
               type="name"
               required
               value={mother.firstName}
-              onChange={(e) => setMother({ ...mother, firstName: e.target.value })}
+              onChange={(e) =>
+                setMother({ ...mother, firstName: e.target.value })
+              }
               id="firstName"
               name="firstName"
             />
@@ -90,7 +65,9 @@ function MomSignUp() {
               type="name"
               required
               value={mother.lastName}
-              onChange={(e) => setMother({ ...mother, lastName: e.target.value })}
+              onChange={(e) =>
+                setMother({ ...mother, lastName: e.target.value })
+              }
               id="lastName"
               name="lastName"
             />
@@ -102,7 +79,9 @@ function MomSignUp() {
               type="number"
               required
               value={mother.numberOfChildren}
-              onChange={(e) => setMother({ ...mother, numberOfChildren: e.target.value })}
+              onChange={(e) =>
+                setMother({ ...mother, numberOfChildren: e.target.value })
+              }
               id="numberOfChildren"
               name="numberOfChildren"
             />
@@ -114,7 +93,9 @@ function MomSignUp() {
               type="address"
               required
               value={mother.address}
-              onChange={(e) => setMother({ ...mother, address: e.target.value })}
+              onChange={(e) =>
+                setMother({ ...mother, address: e.target.value })
+              }
               id="address"
               name="address"
             />
@@ -172,7 +153,9 @@ function MomSignUp() {
               type="time"
               required
               value={mother.startTime}
-              onChange={(e) => setMother({ ...mother, startTime: e.target.value })}
+              onChange={(e) =>
+                setMother({ ...mother, startTime: e.target.value })
+              }
               id="startTime"
               name="startTime"
             />
@@ -184,28 +167,13 @@ function MomSignUp() {
               type="time"
               required
               value={mother.endTime}
-              onChange={(e) => setMother({ ...mother, endTime: e.target.value })}
+              onChange={(e) =>
+                setMother({ ...mother, endTime: e.target.value })
+              }
               id="endTime"
               name="endTime"
             />
           </div>
-
-          {/* <TimePicker
-  label="Start time"
-  views={['hours']}
-  value={mother}
-  onChange={(e) => setMother({ ...mother, startTime: e.target.value })}
-/>
-
-<TimePicker
-  label="end time"
-  views={['hours']}
-  value={mother.endTime}
-  onChange={(e) => setMother({ ...mother, endTime: e.target.value })}
-/> */}
-
-
-
 
           <button type="submit" className="login-button">
             Find
