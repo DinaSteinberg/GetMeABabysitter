@@ -7,7 +7,6 @@ import Sitters from "./Sitters";
 function Homepage() {
   return (
     <>
-  
       <div className="container text-center">
         <div className="row justify-content-center">
           {/* render all of them */}

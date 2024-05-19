@@ -1,33 +1,11 @@
-import { useEffect, useState } from "react";
+const fetchBabysitters = async () => {
+  const response = await fetch("./fetchBabysitters.json");
 
-const FetchBabysitters = () => {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  if (!response.ok) {
+    throw new Error("Error:", response.status);
+  }
 
-  useEffect(() => {
-    const fetchBabysitterData = async () => {
-      try {
-        const response = await fetch("BabysittersJSON.json");
-        if (!response.ok) {
-          throw new Error(`HTTP error: Status ${response.status}`);
-        }
-        let babysittersData = await response.json();
-        setData(babysittersData);
-        setError(null);
-      } catch (err) {
-        setError(err.message);
-        setData(null);
-      } finally {
-        setLoading(false);
-      }
-    };
-    
-    console.log(babysittersData)
-    fetchBabysitterData();
-  }, []);
-
-  return <div></div>;
+  return response.json();
 };
 
-export default FetchBabysitters;
+export default fetchBabysitters;
