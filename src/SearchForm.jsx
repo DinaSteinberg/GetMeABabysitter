@@ -1,17 +1,9 @@
-import { useContext, useState } from "react";
-import { MDBInput, MDBRow, MDBCol } from "mdb-react-ui-kit";
-import TimePicker from "react-time-picker";
-
-// import { useNavigate } from "react-router";
-// import { CurrentUser } from "../contexts/CurrentUser.js";
-import { Link } from "react-router-dom";
+import { useState } from "react";
 // import { BASE_URL } from "../App.js";
 import "./login.css";
+import fetchBabysitters from "./fetchBabysitters";
 
 function MomSignUp() {
-  // const navigate = useNavigate();
-
-  // const { setCurrentUser } = useContext(CurrentUser);
   const [mother, setMother] = useState({
     firstName: "",
     lastName: "",
@@ -33,8 +25,9 @@ function MomSignUp() {
       setError("Start time must be before end time.");
       window.alert("Start time must be before end time. Please try again.");
     } else {
-      setError("");
-      localStorage.setItem("mother", JSON.stringify(mother));
+      setError('');
+      localStorage.setItem('mother', JSON.stringify(mother));
+      fetchBabysitters();
       // Further processing or form submission logic goes here
     }
   }
