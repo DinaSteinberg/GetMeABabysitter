@@ -26,13 +26,19 @@ function MomSignUp() {
 
     });
 
-  // const [errorMessage, setErrorMessage] = useState(null);
+    const [error, setError] = useState('');
 
   async function handleSubmit(e) {
     e.preventDefault();
-
-    console.log("mother", mother);
-    localStorage.setItem('mother', JSON.stringify(mother));
+    if (mother.startTime >= mother.endTime) {
+      setError('Start time must be before end time.');
+      window.alert('Start time must be before end time. Please try again.')
+  } else {
+      setError('');
+      localStorage.setItem('mother', JSON.stringify(mother));
+      // Further processing or form submission logic goes here
+  }
+    
   }
 
   //   try {
@@ -159,6 +165,30 @@ function MomSignUp() {
             id="email"
             name="email"
           />
+           </div>
+           <label htmlFor="startTime">Start Time:</label>
+           <div className="form-control">
+          <input
+            type="time"
+            required
+            value={mother.startTime}
+            onChange={(e) => setMother({ ...mother,startTime: e.target.value })}
+            id="startTime"
+            name="startTime"
+          />
+           </div>
+
+           <label htmlFor="endTime">End Time:</label>
+           <div className="form-control">
+          <input
+            type="time"
+            required
+            value={mother.endTime}
+            onChange={(e) => setMother({ ...mother,endTime: e.target.value })}
+            id="endTime"
+            name="endTime"
+          />
+           </div>
 
 {/* <TimePicker
   label="Start time"
@@ -174,12 +204,9 @@ function MomSignUp() {
   onChange={(e) => setMother({ ...mother, endTime: e.target.value })}
 /> */}
 
-<TimePicker   onChange={(e) => setMother({ ...mother, startTime: e.target.value })} />
 
 
-<TimePicker   onChange={(e) => setMother({ ...mother, endTime: e.target.value })} />
-
-        </div>
+       
         <button type="submit" className="login-button">
           Find
         </button>
