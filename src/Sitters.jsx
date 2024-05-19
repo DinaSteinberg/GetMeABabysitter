@@ -7,14 +7,14 @@ function Sitters() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch('/BabysittersJSON.json'); // Fetch from the local JSON file
+        const res = await fetch("/BabysittersJSON.json"); // Fetch from the local JSON file
         if (!res.ok) {
-          throw new Error('Network response was not ok');
+          throw new Error("Network response was not ok");
         }
         const resData = await res.json();
         setSitters(resData.babysitters); // Access the "babysitters" array in the JSON
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
       }
     };
     fetchData();
@@ -39,6 +39,10 @@ function Sitters() {
             <li>First Aid: {sitter.FirstAidCertified}</li>
             <li>Experience: {sitter.YearsExperience} years</li>
           </ul>
+          {/* <Link to={`/families/${family._id}`} key={family._id}> */}
+
+          <button>Hire</button>
+          {/* </Link> */}
         </div>
       </div>
     );
