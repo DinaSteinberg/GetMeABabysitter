@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+/* This CSS was inspired by Brad Traversy 50 projects in 50 days */
+:root {
+  --primary-color: #ff9f9f;
+  --secondary-color: #a407a1;
+}
+
+/* * {
+  box-sizing: border-box;
+} */
+.sitters-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* body {
+  background-color: var(--primary-color) ;
+  font-family: 'Poppins', sans-serif;
+   margin: 0;
+}  */
+
+.show-sitters {
+  display: flex;
+  width: 300px;
+  margin: 1rem;
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+}
+.show-sitters img {
+  width: 100%;
+}
+.sitter-info {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+.sitter-info a {
+  color: lightpink;
+  text-decoration: none;
+}
+.place-info h3 {
+  margin-top: 0;
+}
+
+.description-sitter {
+  background-color: white;
+  /* height: 30vh; */
+  padding: 2rem;
+  text-align: right;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in;
+}
+
+.description-sitter li {
+  list-style-type: none;
+  align-items: right;
+}
+
+.show-sitters:hover .description-sitter {
+  transform: translateY(0);
+}
+button {
+  /* background-color: var(--primary-color); */
+  color: white;
+  background-color: #ff9f9f;
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  padding: 15px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: bolder;
+  border: 0;
+  border-radius: 5px;
+}
+
+button a {
+  color: white;
+  text-decoration: none;
+}
