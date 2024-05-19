@@ -1,17 +1,10 @@
-import { useContext, useState } from "react";
-import { MDBInput, MDBRow, MDBCol } from 'mdb-react-ui-kit';
-import TimePicker from 'react-time-picker';
+import { useState } from "react";
 
-// import { useNavigate } from "react-router";
-// import { CurrentUser } from "../contexts/CurrentUser.js";
-import { Link } from "react-router-dom";
-// import { BASE_URL } from "../App.js";
+
 import "./login.css";
+import fetchBabysitters from "./fetchBabysitters";
 
 function MomSignUp() {
-  // const navigate = useNavigate();
-
-  // const { setCurrentUser } = useContext(CurrentUser);
   const [mother, setMother] = useState({
     firstName: "",
     lastName: "",
@@ -23,7 +16,6 @@ function MomSignUp() {
     email: "",
     startTime: "",
     endTime: "",
-
   });
 
   const [error, setError] = useState('');
@@ -36,35 +28,10 @@ function MomSignUp() {
     } else {
       setError('');
       localStorage.setItem('mother', JSON.stringify(mother));
+      fetchBabysitters();
       // Further processing or form submission logic goes here
     }
-
   }
-
-  //   try {
-  //     const response = await fetch(`${BASE_URL}/api/authentication/`, {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(credentials),
-  //     });
-
-  //     const data = await response.json();
-  //     console.log("Login", data);
-
-  //     if (response.ok) {
-  //       setCurrentUser(data.user);
-  //       localStorage.setItem("token", data.token);
-  //       navigate(`/`);
-  //     } else {
-  //       setErrorMessage(data.message);
-  //     }
-  //   } catch (error) {
-  //     console.error("An error occurred:", error);
-  //     setErrorMessage("An error occurred, please try again");
-  //   }
-  // }
 
   return (
     <div className="login-top-container">
@@ -189,23 +156,6 @@ function MomSignUp() {
               name="endTime"
             />
           </div>
-
-          {/* <TimePicker
-  label="Start time"
-  views={['hours']}
-  value={mother}
-  onChange={(e) => setMother({ ...mother, startTime: e.target.value })}
-/>
-
-<TimePicker
-  label="end time"
-  views={['hours']}
-  value={mother.endTime}
-  onChange={(e) => setMother({ ...mother, endTime: e.target.value })}
-/> */}
-
-
-
 
           <button type="submit" className="login-button">
             Find
