@@ -6,11 +6,10 @@ import Header from "./Header";
 function Homepage() {
   return (
     <>
-  
       <div className="container text-center">
         <div className="row justify-content-center">
           {/* render all of them */}
-          <Header/>
+          <Header />
           <BabysitterCards />
         </div>
       </div>

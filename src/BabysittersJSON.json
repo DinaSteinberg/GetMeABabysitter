@@ -1,7 +1,7 @@
 {
-  "babysitters":
-  [
-    {"name":"Jane Doe",
+  "babysitters": [
+    {
+      "name": "Jane Doe",
       "StartTime": "1500",
       "EndTime": "1900",
       "ZipCode": 11230,
@@ -11,7 +11,8 @@
       "FirstAidCertified": "No",
       "YearsExperience": 3
     },
-    {"name":"Avigail Akselrod",
+    {
+      "name": "Avigail Akselrod",
       "StartTime": "1300",
       "EndTime": "1600",
       "ZipCode": 11230,
@@ -21,7 +22,8 @@
       "FirstAidCertified": "Yes",
       "YearsExperience": 1
     },
-    {"name":"Baila Bernstein",
+    {
+      "name": "Baila Bernstein",
       "StartTime": "1900",
       "EndTime": "2200",
       "ZipCode": 11230,
@@ -31,7 +33,8 @@
       "FirstAidCertified": "No",
       "Years Experience": 3
     },
-    {"name":"Chavi Chernoff",
+    {
+      "name": "Chavi Chernoff",
       "StartTime": "1000",
       "EndTime": "2300",
       "ZipCode": 11230,
@@ -41,7 +44,8 @@
       "FirstAidCertified": "No",
       "YearsExperience": 5
     },
-    {"name":"Debbie Davis",
+    {
+      "name": "Debbie Davis",
       "StartTime": "1200",
       "EndTime": "1600",
       "ZipCode": 11213,
@@ -51,7 +55,8 @@
       "FirstAidCertified": "No",
       "YearsExperience": 5
     },
-    {"name":"Elky Elbaum",
+    {
+      "name": "Elky Elbaum",
       "StartTime": "1400",
       "EndTime": "1800",
       "ZipCode": 11213,
@@ -61,7 +66,8 @@
       "FirstAidCertified": "No",
       "YearsExperience": 5
     },
-    {"name":"Faigy Friedman",
+    {
+      "name": "Faigy Friedman",
       "StartTime": "1200",
       "EndTime": "2400",
       "ZipCode": 11213,

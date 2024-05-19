@@ -27,7 +27,8 @@ function MomSignUp() {
     } else {
       setError('');
       localStorage.setItem('mother', JSON.stringify(mother));
-      fetchBabysitters();
+      const data = fetchBabysitters();
+      console.log(data)
       // Further processing or form submission logic goes here
     }
   }
