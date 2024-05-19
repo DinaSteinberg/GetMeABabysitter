@@ -1,11 +1,13 @@
-import React from 'react'
-import './Header.css'
+import React from "react";
+import "./Header.css";
+
 function Header() {
   return (
-    <div>
-      
+    <div className="header">
+      <h1>JSit</h1>
+      <p>The Jewish Babysitter Shadchan</p>
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;
